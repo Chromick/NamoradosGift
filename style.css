@@ -1,0 +1,128 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #5e2b40;
+  overflow: auto;
+  animation: fundoColorido 20s infinite alternate;
+}
+@keyframes fundoColorido {
+  0%   { background: radial-gradient(#ffe0ea, #ffc5d9); }
+  50%  { background: radial-gradient(#ffe0ea, #ffb6c1); }
+  100% { background: radial-gradient(#ffe0ea, #ffc5d9); }
+}
+
+.star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle at center, rgba(255, 215, 0, 0.8), rgba(184, 134, 11, 0.5));
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: twinkle 2s infinite ease-in-out;
+  box-shadow: 0 0 6px 2px #ffd700;
+}
+.star {
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.9;
+  animation: twinkle 2s infinite ease-in-out;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.musica-container {
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.mensagem h1 {
+  font-size: 2em;
+  margin-top: 30px;
+}
+
+.mensagem p {
+  font-size: 1.2em;
+  margin: 10px 0 40px;
+}
+
+.carrossel {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  height: 300px;
+  margin: 0 auto 30px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 192, 203, 0.5);
+}
+
+.carrossel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.carrossel img.active {
+   opacity: 1;
+  z-index: 1;
+    animation: levitar 4s ease-in-out infinite;
+}
+@keyframes levitar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.mensagens-reservadas {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ffeef2;
+    box-shadow: 0 0 15px rgba(255, 192, 203, 0.5);
+  border-radius: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contador-amor {
+  margin: 40px auto;
+  background-color: #fbe9ec;
+    box-shadow: 0 0 15px rgba(255, 192, 203, 0.5);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+}
+
+#contador-amor h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+#tempo-juntos {
+  font-size: 1.3em;
+  color: #b7325a;
+}
+
+#cartinha {
+  font-family: 'Courier New', monospace;
+  font-size: 1.5em;
+  color: #b7325a;
+  margin: 40px auto;
+  max-width: 90%;
+  white-space: pre-wrap;
+}
+
+
+
+
