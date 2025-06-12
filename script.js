@@ -89,3 +89,14 @@
 
   escreverTexto();
 })();
+
+document.getElementById("abrirCarta").addEventListener("click", function () {
+  const intro = document.getElementById("intro");
+  const musica = document.getElementById("musica");
+
+  intro.style.opacity = "0";
+  setTimeout(() => {
+    intro.style.display = "none";
+    musica.play();
+  }, 500);
+});
